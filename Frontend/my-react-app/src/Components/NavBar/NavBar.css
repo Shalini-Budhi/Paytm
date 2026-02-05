@@ -1,0 +1,59 @@
+.navbar {
+  height: 64px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.nav-left img {
+  height: 23px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  font-weight: 600;
+}
+
+.nav-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-right {
+  display: flex;
+  gap: 16px;
+}
+
+.download-btn {
+  border: none;
+  background: none;
+  font-weight: 600;
+  color: #002970;
+}
+
+.signin-btn {
+  background: #002970;
+  color: white;
+  border-radius: 20px;
+  padding: 8px 16px;
+  border: none;
+}
+
+.profile-wrapper {
+  position: relative;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}

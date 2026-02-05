@@ -1,0 +1,85 @@
+.booking-container {
+  background: linear-gradient(#e9f8ff, #fff);
+  padding: 30px;
+}
+
+.booking-tabs {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  cursor: pointer;
+  padding-bottom: 6px;
+}
+
+.tab.active {
+  color: #00baf2;
+  border-bottom: 2px solid #00baf2;
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.trip-type {
+  display: flex;
+  gap: 20px;
+}
+
+.dates {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.date {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.date.active {
+  background: #00baf2;
+  color: white;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.seat-buttons button {
+  border: 1px solid #ddd;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.seat-buttons .selected {
+  border-color: #00baf2;
+  color: #00baf2;
+}
+
+.primary-btn {
+  margin-left: auto;
+  background: #00baf2;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}

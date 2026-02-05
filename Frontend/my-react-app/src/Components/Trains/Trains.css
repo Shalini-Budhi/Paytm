@@ -1,0 +1,152 @@
+.train-page {
+  background: linear-gradient(#e9f8ff, #fff);
+  padding: 30px;
+}
+
+/* Tabs */
+.transport-tabs {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  font-weight: 600;
+}
+
+.transport-tabs .active {
+  color: #00baf2;
+  border-bottom: 2px solid #00baf2;
+  padding-bottom: 6px;
+}
+
+.transport-tabs .help {
+  margin-left: auto;
+}
+
+/* Search Card */
+.search-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.station-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.station-box {
+  flex: 1;
+}
+
+.station-box label {
+  font-size: 14px;
+  color: #777;
+}
+
+.station-box input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  font-size: 18px;
+  padding: 6px 0;
+  outline: none;
+}
+
+.swap-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Dates */
+.date-box {
+  flex: 2;
+}
+
+.dates {
+  display: flex;
+  gap: 10px;
+}
+
+.date {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  min-width: 70px;
+}
+
+.date.active {
+  background: #00baf2;
+  color: #fff;
+  border-color: #00baf2;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Button */
+.search-btn {
+  background: #00baf2;
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Coach Types */
+.coach-types {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.coach-types button {
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  background: #fff;
+}
+
+.coach-types .active {
+  background: #00baf2;
+  color: #fff;
+  border-color: #00baf2;
+}
+
+.irctc {
+  margin-left: auto;
+  font-size: 14px;
+  color: #002970;
+}
+
+/* Additional Services */
+.section-title {
+  margin: 40px 0 20px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+}

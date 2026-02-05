@@ -1,0 +1,26 @@
+.ticket-container {
+  width: 220px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-item {
+  text-align: center;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.ticket-item:hover {
+  background-color: #f2f2f2;
+}
+
+.ticket-item.active {
+  font-weight: 600;
+  color: #007bff;
+}

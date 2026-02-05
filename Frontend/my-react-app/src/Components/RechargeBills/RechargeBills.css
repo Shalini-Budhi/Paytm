@@ -1,0 +1,24 @@
+
+.bill-container {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 260px;
+  padding: 16px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+.bill-item {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.bill-item:last-child {
+  margin-bottom: 0;
+} 
+

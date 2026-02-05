@@ -1,0 +1,33 @@
+.business-menu-container {
+  width: 320px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  font-family: Arial, sans-serif;
+}
+
+.business-menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 18px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.25s ease;
+}
+
+.business-menu-item:hover {
+  background-color: #f5f7fa;
+}
+
+.business-menu-item.active {
+  background-color: #e8f0fe;
+}
+
+.arrow {
+  font-size: 18px;
+  font-weight: bold;
+}
