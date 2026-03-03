@@ -1,16 +1,19 @@
 import { useState } from "react";
 import "./Navbar.css";
 import RechargeBills from "../RechargeBills/RechargeBills";
+import TicketBooking from "../TicketBooking/TicketBooking";
+import PaymentServices from "../PaymentsServices/PaymentsServices";
+import PaytmBusiness from "../PaytmBusiness/PaytmBusiness";
+import Company from "../Company/Company";
 import { FaUserCircle, FaDownload } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import logo from "../../assets/Images/Logo.png";
 import travel from "../../assets/Images/Paytm_Travel_Logo.svg";
 
 const Navbar = () => {
+    const [activeMenu, setActiveMenu] = useState(null);
   const [showProfile, setShowProfile] = useState(false);
   const [downloadText, setDownloadText] = useState("Download App");
-
-  const [showRecharge, setShowRecharge] = useState(false);
 
   const location = useLocation();
 
@@ -27,6 +30,16 @@ const Navbar = () => {
         return logo;
     }
   };
+   
+
+    const handleMouseEnter = (menu) => {
+    setActiveMenu(menu);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveMenu(null);
+  };
+
 
   return (
     <nav className="navbar">
@@ -43,17 +56,45 @@ const Navbar = () => {
       <ul className="nav-menu">
         <li
           className="nav-item"
-          onMouseEnter={() => setShowRecharge(true)}
-          onMouseLeave={() => setShowRecharge(false)}
+          onMouseEnter={() => handleMouseEnter("Recharge")}
+          onMouseLeave={handleMouseLeave}
         >
           Recharge & Bills
-          {showRecharge && <RechargeBills />}
+          {activeMenu === "Recharge" && <RechargeBills />}
         </li>
 
-        <li className="nav-item">Ticket Booking</li>
-        <li className="nav-item">Payments & Services</li>
-        <li className="nav-item">Paytm for Business</li>
-        <li className="nav-item">Company</li>
+        <li
+          className="nav-item"
+          onMouseEnter={() => handleMouseEnter("TicketBooking")}
+          onMouseLeave={handleMouseLeave}
+        >
+          Ticket Booking
+          {activeMenu === "TicketBooking" && <TicketBooking />}
+        </li>
+        <li
+          className="nav-item"
+          onMouseEnter={() => handleMouseEnter("PaymentServices")}
+          onMouseLeave={handleMouseLeave}
+        >
+          Payments & Services
+          {activeMenu === "PaymentServices" && <PaymentServices />}
+        </li>
+        <li
+          className="nav-item"
+          onMouseEnter={() => handleMouseEnter("PaytmBusiness")}
+          onMouseLeave={handleMouseLeave}
+        >
+          Paytm for Business
+          {activeMenu === "PaytmBusiness" && <PaytmBusiness />}
+        </li>
+        <li
+          className="nav-item"
+          onMouseEnter={() => handleMouseEnter("Company")}
+          onMouseLeave={handleMouseLeave}
+        >
+          Company
+          {activeMenu === "Company" && <Company />}
+        </li>
       </ul>
 
       {/* RIGHT */}

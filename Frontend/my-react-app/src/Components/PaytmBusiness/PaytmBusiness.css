@@ -5,6 +5,8 @@
   padding: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
   font-family: Arial, sans-serif;
+  position: absolute;
+  top: 50px;
 }
 
 .business-menu-item {
