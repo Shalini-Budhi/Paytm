@@ -10,13 +10,16 @@ import Company from "./Components/Company/Company";
 import Flights from "./Components/Flights/Flights";
 import Bus from "./Components/Bus/Bus";
 import Trains from "./Components/Trains/Trains";
+import Signup from "./Components/SignUp/SignUp";
+import LoginPage from "./Components/LoginPage/LoginPage"
 const App = () => {
   return (
     <>
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        debugger
+        <Route path="/signup" element={<Signup/>} />
+        <Route path="/loginpage" element={< LoginPage/>}/>
         <Route path="/rechargebills" element={<RechargeBills />} />
         <Route path="/ticketbooking" element={<TicketBooking />} />
         <Route path="/paymentsservices" element={<PaymentsServices />} />

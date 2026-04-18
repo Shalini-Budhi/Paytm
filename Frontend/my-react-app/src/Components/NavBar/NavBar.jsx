@@ -7,15 +7,19 @@ import PaytmBusiness from "../PaytmBusiness/PaytmBusiness";
 import Company from "../Company/Company";
 import { FaUserCircle, FaDownload } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import logo from "../../assets/Images/Logo.png";
 import travel from "../../assets/Images/Paytm_Travel_Logo.svg";
 
+
+
 const Navbar = () => {
-    const [activeMenu, setActiveMenu] = useState(null);
+  const [activeMenu, setActiveMenu] = useState(null);
   const [showProfile, setShowProfile] = useState(false);
   const [downloadText, setDownloadText] = useState("Download App");
 
   const location = useLocation();
+   const navigate  = useNavigate();
 
   const getNavbarImage = () => {
     console.log(location, "location");
@@ -30,9 +34,8 @@ const Navbar = () => {
         return logo;
     }
   };
-   
 
-    const handleMouseEnter = (menu) => {
+  const handleMouseEnter = (menu) => {
     setActiveMenu(menu);
   };
 
@@ -40,7 +43,9 @@ const Navbar = () => {
     setActiveMenu(null);
   };
 
-
+  const onClick = () => {
+    setActiveMenu(null);
+  };
   return (
     <nav className="navbar">
       {/* LEFT */}
@@ -113,8 +118,10 @@ const Navbar = () => {
 
           {showProfile && (
             <div className="profile-dropdown">
-              <p>Login</p>
-              <p>Create Account</p>
+              {/* <p></p>
+              <p></p> */}
+              <button onClick={() => navigate ("./loginpage")}>Login</button>
+              <button onClick={() => navigate ("./signup")}>Create Account</button>
             </div>
           )}
         </div>
