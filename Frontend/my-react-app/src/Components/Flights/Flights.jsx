@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Flights.css";
 import { FaPlane, FaBus, FaTrain } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Flights = () => {
   // Tabs
