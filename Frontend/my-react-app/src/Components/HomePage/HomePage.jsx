@@ -9,10 +9,13 @@ import fasttag from "../../assets/Images/Fastag.png";
 import viewall from "../../assets/Images/ViewAll.png";
 import bannerupi from "../../assets/Images/BannerUpi.jpg";
 
+
 import { FaApple, FaGooglePlay,FaPlane, FaBus, FaTrain } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   /* ================= STATES ================= */
+  const navigate = useNavigate();
   const [downloadText, setDownloadText] = useState("Download Paytm App");
   const [showMsg, setShowMsg] = useState(false);
   const [activeItem, setActiveItem] = useState(null);
@@ -208,7 +211,7 @@ const HomePage = () => {
     <div className="travel-page">
       {/* TABS */}
       <div className="travel-tabs">
-        <div className="tab active"><FaPlane /> Flights</div>
+        <div className="tab active"  onClick={() => navigate('/Flights')}><FaPlane /> Flights</div>
         <div className="tab"><FaBus /> Bus</div>
         <div className="tab"><FaTrain /> Trains</div>
         <div className="tab"><FaPlane /> Intl. Flights</div>
