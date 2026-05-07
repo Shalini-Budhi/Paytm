@@ -11,29 +11,29 @@ import Flights from "./Components/Flights/Flights";
 import Bus from "./Components/Bus/Bus";
 import Trains from "./Components/Trains/Trains";
 import Signup from "./Components/SignUp/SignUp";
-import LoginPage from "./Components/LoginPage/LoginPage"
+import LoginPage from "./Components/LoginPage/LoginPage";
 import MobileRecharge from "./Components/MobileRecharge/MobileRecharge";
 import { FormProvider } from "./Components/FormContext/FormContext";
 const App = () => {
   return (
     <>
-     <FormProvider>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/signup" element={<Signup/>} />
-        <Route path="/loginpage" element={< LoginPage/>}/>
-        <Route path="/rechargebills" element={<RechargeBills />} />
-        <Route path="/mobilerecharge" element={<MobileRecharge/>}/>
-        <Route path="/ticketbooking" element={<TicketBooking />} />
-        <Route path="/paymentsservices" element={<PaymentsServices />} />
-        <Route path="/paytmbusiness" element={<PaytmBusiness />} />
-        <Route path="/company" element={< Company/>} />
-        <Route path="/flights" element={< Flights/>} />
-        <Route path="/bus" element={< Bus/>} />
-          <Route path="/trains" element={< Trains/>} />
-      </Routes>
-       </FormProvider>
+      <FormProvider>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/loginpage" element={<LoginPage />} />
+          <Route path="/rechargebills" element={<RechargeBills />} />
+          <Route path="/mobilerecharge" element={<MobileRecharge />} />
+          <Route path="/ticketbooking" element={<TicketBooking />} />
+          <Route path="/paymentsservices" element={<PaymentsServices />} />
+          <Route path="/paytmbusiness" element={<PaytmBusiness />} />
+          <Route path="/company" element={<Company />} />
+          <Route path="/flights" element={<Flights />} />
+          <Route path="/bus" element={<Bus />} />
+          <Route path="/trains" element={<Trains />} />
+        </Routes>
+      </FormProvider>
     </>
   );
 };

@@ -46,6 +46,7 @@ const Navbar = () => {
   const onClick = () => {
     setActiveMenu(null);
   };
+  
   return (
     <nav className="navbar">
       {/* LEFT */}
