@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import "./Signup.css";
+import axios from "axios";
+import {useNavigate} from "react-router-dom"
 
 const Signup = () => {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
     confirmPassword: "",
-    mobile: "",
-    mail:"",
+    phonenumber: "",
+    email: "",
   });
-
-  const [error, setError] = useState("");
+const navigate = useNavigate()
+  const [responseError, setResponseError] = useState("");
   const [success, setSuccess] = useState("");
 
   // Handle input change
@@ -22,24 +24,29 @@ const Signup = () => {
   };
 
   // Handle form submit
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
+    setResponseError("");
+    setSuccess("");
+
     if (formData.password !== formData.confirmPassword) {
-      setError("Passwords do not match!");
-      setSuccess("");
+      setResponseError("Passwords do not match!");
       return;
     }
 
-    if (formData.mobile.length !== 10) {
-      setError("Mobile number must be 10 digits!");
-      setSuccess("");
-      return;
-    }
+    try {
+      const response = await axios.post(
+        "http://localhost:7000/signup",
+        formData,
+      );
 
-    setError("");
-    setSuccess("Signup Successful!");
-    console.log(formData);
+      setSuccess(response.data.message);
+      navigate("/")
+
+    } catch (error) {
+      setResponseError(error.response?.data?.message || "Something went wrong");
+    }
   };
 
   return (
@@ -56,13 +63,16 @@ const Signup = () => {
             onChange={handleChange}
             required
           />
+
           <input
             type="email"
-            name="mail"
+            name="email"
             placeholder="Email"
-            value={formData.mail}
+            value={formData.email}
             onChange={handleChange}
+            required
           />
+
           <input
             type="password"
             name="password"
@@ -82,15 +92,16 @@ const Signup = () => {
           />
 
           <input
-            type="tel"
-            name="mobile"
-            placeholder="Mobile Number"
-            value={formData.mobile}
+            type="text"
+            name="phonenumber"
+            placeholder="Phone Number"
+            value={formData.phonenumber}
             onChange={handleChange}
             required
           />
 
-          {error && <p className="error">{error}</p>}
+          {responseError && <p className="error">{responseError}</p>}
+
           {success && <p className="success">{success}</p>}
 
           <button type="submit">Sign Up</button>
