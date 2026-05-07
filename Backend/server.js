@@ -7,7 +7,7 @@ import connectDB from "./src/config/config.js";
 
 connectDB()
 
-console.log(process.env.PORT)
+
 
 app.listen(process.env.PORT, ()=>{
   console.log("Server started check now");
